@@ -76,6 +76,7 @@ public class ParticleSystemControlMixer : PlayableBehaviour
 
     public override void OnGraphStart(Playable playable)
     {
+        if (Application.isPlaying) return;
         if (particleSystem == null) return;
 
         if (Application.isPlaying)
@@ -88,6 +89,7 @@ public class ParticleSystemControlMixer : PlayableBehaviour
 
     public override void ProcessFrame(Playable playable, FrameData info, object playerData)
     {
+        if (Application.isPlaying) return;
         if (particleSystem == null) return;
 
         // Do nothing if the target game object is not active.

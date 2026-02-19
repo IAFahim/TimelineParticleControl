@@ -39,6 +39,7 @@ public class ParticleSystemControlTrack : TrackAsset
 
     public override void GatherProperties(PlayableDirector director, IPropertyCollector driver)
     {
+        if (Application.isPlaying) return;
         //
         // In this track, the following properties will be modified.
         //
